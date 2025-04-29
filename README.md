@@ -6,7 +6,7 @@ Date de création : 22/04/2025
 
 Auteur : Julien Coureau
 
-Version : Python 3.12.7
+Version : 0.0.1
 
 INFORMATIONS MÉTHODOLOGIQUES
 Contexte et objectif
@@ -59,17 +59,38 @@ requests
 beautifulsoup4​
 
 UTILISATION
-1°) Ouvrir le fichier Scrap BooksToScrape.py
 
-2°) Modifier la ligne suivante pour choisir une des catégories disponibles :​
-test_category = "sports"  # ou "science", "travel"
-scrape_category(test_category)
+Pré-requis : 
+Avant de démarrer, assurez-vous d'avoir installé les bibliothèques suivantes : 
+- pip install requests
+- pip install beautifulsoup4
 
-3°) Exécuter le script : Scrap BooksToScrape.py
+Installation et démarrage 
 
-4°) Une fois exécuté :
+1°) Cloner le repository : https://git@github.com:JulienCoureau/OC_P2_BooksToScrape.git
+2°) Créer et activer un environnement virtuel
+cd OC_P2_BooksToScrape
+python -m venv env
+source env/bin/activate # mac/linux
+env\Scripts\activate # Windows
 
-Un fichier CSV nommé sports_books.csv (ou autre catégorie) est généré automatiquement.
-Ce fichier contient toutes les données collectées.
-Il est enregistré dans le dossier courant du script
+3°) Installer les dépendances : 
+pip install -r requirements.txt
+
+4°) Exécuter le scipt principal : 
+python ScrapBooksToScrape.py
+
+Resultats : 
+
+Après exécution : 
+    - Un dossier books sera créé automatiquement
+    - Chaque catégorie aura son propre sous-dossier
+    - Chaque sous dossier contiendra : 
+        - Un fichier CSV avec les informations des livres
+        - Un dossier images contenant toutes les couvertures des livres
+
+Note 
+
+- Un script vérifie automatiquement qu'il y a bien 50 catégories
+- En cas de problème réseau ou de structure du site modifiée, un message d'erreur apparaîtra
 
