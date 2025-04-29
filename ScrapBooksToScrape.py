@@ -200,14 +200,14 @@ def scrape_all_categories(categories):
         os.makedirs(base_folder)
 
     for category_name, category_url in categories.items():
-        print(f"\n📚 Scraping catégorie : {category_name}")
+        print(f"\nScraping catégorie : {category_name}")
 
         category_folder = os.path.join(base_folder, category_name)
         images_folder = os.path.join(category_folder, "images")
         os.makedirs(images_folder, exist_ok=True)
 
         book_urls = get_all_book_urls_from_category(category_url)
-        print(f"🔗 {len(book_urls)} livres trouvés.")
+        print(f"{len(book_urls)} livres trouvés.")
 
         books_data = []
 
@@ -234,8 +234,8 @@ if __name__ == "__main__":
     # Vérification du nombre de catégories
     expected_categories = 50
     if len(categories) != expected_categories:
-        print(f"⚠️ Attention : {len(categories)} catégories trouvées au lieu de {expected_categories}.")
+        print(f"Attention : {len(categories)} catégories trouvées au lieu de {expected_categories}.")
     else:
-        print(f"✅ Nombre de catégories correct : {len(categories)}")
+        print(f"Nombre de catégories correct : {len(categories)}")
 
     scrape_all_categories(categories)

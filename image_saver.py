@@ -15,8 +15,8 @@ def save_image_from_url(image_url, upc, folder="images"):
             with open(filename, "wb") as file:
                 for chunk in response.iter_content(1024):
                     file.write(chunk)
-            print(f"📷 Image enregistrée : {filename}")
+            print(f"Image enregistrée : {filename}")
         else:
-            print(f"⚠️ Image non trouvée : {image_url}")
+            print(f"Image non trouvée : {image_url}")
     except Exception as e:
         print(f" Erreur lors du téléchargement de l'image : {e}")
