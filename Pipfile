@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+beautifulsoup4 = "==4.13.4"
+certifi = "==2025.1.31"
+charset-normalizer = "==3.4.1"
+idna = "==3.10"
+requests = "==2.32.3"
+soupsieve = "==2.7"
+typing-extensions = "==4.13.2"
+urljoin = "==1.0.0"
+urllib3 = "==2.4.0"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"
