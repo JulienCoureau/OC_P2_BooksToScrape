@@ -4,10 +4,10 @@ import requests
 def save_image_from_url(image_url, upc, folder="images"):
     """Télécharge et enregistre une image à partir de son URL."""
     
-    if not os.path.exists(folder):  # Vérifie si le dossier existe
-        os.makedirs(folder)          # Crée le dossier s'il n'existe pas
+    if not os.path.exists(folder): 
+        os.makedirs(folder)
 
-    filename = os.path.join(folder, f"{upc}.jpg")  # Définit le chemin complet du fichier image
+    filename = os.path.join(folder, f"{upc}.jpg")
 
     try:
         response = requests.get(image_url, stream=True)
