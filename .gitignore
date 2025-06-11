@@ -1,3 +1,11 @@
 env/
 venv/
 books/
+
+# Fichiers système macOS
+.DS_Store
+
+# Compilations Python
+__pycache__/
+*.py[cod]
+
